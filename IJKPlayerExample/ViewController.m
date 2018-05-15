@@ -20,14 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * str = [[NSString alloc]initWithFormat:@"%@",[[NSBundle mainBundle]pathForResource:@"playerso" ofType:@"mov"]];
-//    self.url = [NSURL URLWithString:str];
+    NSString * str = [[NSString alloc]initWithFormat:@"%@",[[NSBundle mainBundle]pathForResource:@"test" ofType:@"mov"]];
+    self.url = [NSURL URLWithString:str];
     //网络视频
 //        self.url = [NSURL URLWithString:@"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
     //    _player = [[IJKAVMoviePlayerController alloc] initWithContentURL:self.url];
     
     //直播视频
-    self.url = [NSURL URLWithString:@"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8"];
+//    self.url = [NSURL URLWithString:@"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8"];
     _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:nil];
     
     //    _player = [[IJKFFMoviePlayerController alloc]initWithContentURLString:str withOptions:nil];

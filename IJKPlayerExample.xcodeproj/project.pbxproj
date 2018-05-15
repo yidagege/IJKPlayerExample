@@ -32,6 +32,7 @@
 		DF9F5ACF209B1FC500EEB5BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9F5ACE209B1FC500EEB5BB /* UIKit.framework */; };
 		DF9F5AD1209B1FCE00EEB5BB /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9F5AD0209B1FCE00EEB5BB /* VideoToolbox.framework */; };
 		DFAAE7B8209B373200C51E84 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAAE7B7209B373200C51E84 /* libc++.tbd */; };
+		DFAE9C7420AA86EB0064C827 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = DFAE9C7320AA86EB0064C827 /* test.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		DF9F5ACE209B1FC500EEB5BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DF9F5AD0209B1FCE00EEB5BB /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		DFAAE7B7209B373200C51E84 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DFAE9C7320AA86EB0064C827 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		DF9F5A73209B1E8B00EEB5BB = {
 			isa = PBXGroup;
 			children = (
+				DFAE9C7320AA86EB0064C827 /* test.mov */,
 				DF4F676E20A047A300019F72 /* framework */,
 				DF9F5A7E209B1E8B00EEB5BB /* IJKPlayerExample */,
 				DF9F5AB4209B1EBE00EEB5BB /* framework */,
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF9F5A8F209B1E8B00EEB5BB /* LaunchScreen.storyboard in Resources */,
+				DFAE9C7420AA86EB0064C827 /* test.mov in Resources */,
 				DF9F5A8C209B1E8B00EEB5BB /* Assets.xcassets in Resources */,
 				DF9F5A87209B1E8B00EEB5BB /* Main.storyboard in Resources */,
 				DF4F676F20A047A300019F72 /* framework in Resources */,
