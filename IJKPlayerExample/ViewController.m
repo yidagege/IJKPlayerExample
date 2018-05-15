@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
-
+//港台直播源  http://chriszeng87.iteye.com/blog/2230971
 @interface ViewController (){
     IJKFFMoviePlayerController *_player;
 }
@@ -21,16 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString * str = [[NSString alloc]initWithFormat:@"%@",[[NSBundle mainBundle]pathForResource:@"test" ofType:@"mov"]];
-    self.url = [NSURL URLWithString:str];
+//    self.url = [NSURL URLWithString:str];
     //网络视频
 //        self.url = [NSURL URLWithString:@"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
-    //    _player = [[IJKAVMoviePlayerController alloc] initWithContentURL:self.url];
-    
+//        _player = [[IJKAVMoviePlayerController alloc] initWithContentURL:self.url];
+    //IJKFFMoviePlayerController 直播  IJKAVMoviePlayerController 点播
     //直播视频
-//    self.url = [NSURL URLWithString:@"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8"];
+    self.url = [NSURL URLWithString:@"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8"];
     _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:nil];
     
-    //    _player = [[IJKFFMoviePlayerController alloc]initWithContentURLString:str withOptions:nil];
     _player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     _player.view.frame = CGRectMake(5, 30, self.view.bounds.size.width - 10, 180);//self.view.bounds;
     _player.scalingMode = IJKMPMovieScalingModeAspectFit; //缩放模式
