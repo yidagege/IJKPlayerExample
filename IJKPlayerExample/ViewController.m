@@ -12,6 +12,8 @@
 @interface ViewController (){
     id<IJKMediaPlayback> _player;
     UIButton *_playBtn;
+    UISlider *_playSlider;
+
 }
 @property (nonatomic, strong) NSURL *url;
 
@@ -46,6 +48,19 @@
     [_playBtn addTarget:self action:@selector(switchPlay) forControlEvents:UIControlEventTouchUpInside];
     [_playBtn setTitle:@"播放" forState:UIControlStateNormal];
     [self.view addSubview:_playBtn];
+    
+    _playSlider = [[UISlider alloc]initWithFrame:CGRectMake(20, 300, self.view.frame.size.width - 40, 30)];
+    _playSlider.minimumValue = 0.0;
+    _playSlider.maximumValue = 1.0;
+    [self.view addSubview:_playSlider];
+    _playSlider.minimumTrackTintColor = [UIColor grayColor];
+    _playSlider.maximumTrackTintColor = [UIColor redColor];
+    [_playSlider addTarget:self action:@selector(sliderValueChange:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)sliderValueChange:(UISlider *)sender{
+    CGFloat volume = [MPMusicPlayerController applicationMusicPlayer].volume;
+    CGFloat brightness = [UIScreen mainScreen].brightness;
 }
 
 - (void)switchPlay{
