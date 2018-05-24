@@ -1,0 +1,10 @@
+i*.xcuserdata
+*.xcuserstate
+*.xcscheme
+.DS_Store
+**/.idea
+**/iOSInjectionProject
+**/Pods
+**/_Pods.xcodeproj
+**/xcuserdata/
+~              
